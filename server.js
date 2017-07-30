@@ -55,6 +55,13 @@ app.get('/about', (req, res, next) => {
   });
 });
 
+app.get('/projects', (req, res, next) => {
+  res.render("projects.hbs", {
+    pageTitle: "Projects Page",
+    welcomeMessage: "This is a portfolio page"
+  });
+});
+
 app.get("/bad", (req, res, next) => {
   res.send({
     errorMessage: "There was an error in handling the request"
